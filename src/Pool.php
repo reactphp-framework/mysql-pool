@@ -137,7 +137,7 @@ class Pool extends AbstractConnectionPool implements ConnectionInterface,Tranact
         return $deferred->promise();
     }
 
-    protected function createConnection()
+    protected function createConnection($params = null)
     {
         return $this->factory->createLazyConnection($this->uri);
     }
